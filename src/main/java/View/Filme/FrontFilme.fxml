@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="BTNPesquisar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="625.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Filme.ControllerFilme">
+   <children>
+      <Label layoutX="262.0" layoutY="2.0" prefHeight="64.0" prefWidth="190.0" text="FILMES">
+         <font>
+            <Font name="Segoe Print" size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="TableFilme" layoutX="7.0" layoutY="260.0" prefHeight="186.0" prefWidth="617.0">
+        <columns>
+          <TableColumn fx:id="ColumaNome" prefWidth="112.0" text="NOME" />
+          <TableColumn fx:id="ColunaDiretor" prefWidth="82.0" text="DIRETOR" />
+            <TableColumn fx:id="ColunaGenero" prefWidth="101.0" text="GENERO" />
+            <TableColumn fx:id="ColunaDuracao" prefWidth="96.0" text="DURAÇÃO" />
+            <TableColumn fx:id="ColunaLancamento" prefWidth="106.0" text="LANCAMENTO" />
+            <TableColumn fx:id="ColunaId" minWidth="6.0" prefWidth="119.0" text="ID" />
+        </columns>
+      </TableView>
+      <Label fx:id="Labelid" layoutX="464.0" layoutY="18.0" text="id">
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelLabel" layoutX="347.0" layoutY="200.0" text="Label">
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TXTNome" layoutX="41.0" layoutY="51.0" promptText="Nome" />
+      <TextField fx:id="TXTDiretor" layoutX="41.0" layoutY="124.0" promptText="Diretor" />
+      <TextField fx:id="TXTGenero" layoutX="41.0" layoutY="87.0" promptText="Genero" />
+      <TextField fx:id="TXTDuracao" layoutX="41.0" layoutY="161.0" promptText="Duração" />
+      <DatePicker fx:id="TXTData" layoutX="41.0" layoutY="202.0" promptText="Lançamento" />
+      <TextField fx:id="TXTBuscarID" layoutX="516.0" layoutY="14.0" prefHeight="25.0" prefWidth="98.0" promptText="Buscar Id" />
+      <Button fx:id="BTNPesquisar" layoutX="524.0" layoutY="51.0" mnemonicParsing="false" onAction="#BuscarID" prefHeight="25.0" prefWidth="84.0" text="BUSCAR" />
+      <Button fx:id="BTNSalvar" layoutX="301.0" layoutY="87.0" mnemonicParsing="false" onAction="#SalvarFilme" prefHeight="25.0" prefWidth="108.0" text="INSERIR" />
+      <Button fx:id="BTNEditar" layoutX="301.0" layoutY="137.0" mnemonicParsing="false" onAction="#EditarFilme" prefHeight="25.0" prefWidth="108.0" text="EDITAR" />
+      <Button fx:id="BTNDeletar" layoutX="301.0" layoutY="189.0" mnemonicParsing="false" onAction="#DeletarFilme" prefHeight="25.0" prefWidth="108.0" text="DELETAR" />
+   </children>
+</AnchorPane>
